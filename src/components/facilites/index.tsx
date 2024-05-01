@@ -41,7 +41,8 @@ function Facilites () {
                                         color="c2"
                                         text="자세히 보기"
                                         page="/test"
-                                        // data="2"
+                                        // alertMessage="test"
+                                        // data={2}
                                         // width={120}
                                         // height={60}
                                         // radius={20}

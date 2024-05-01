@@ -8,9 +8,10 @@ import { useNavigate } from 'react-router-dom';
     color="c1"              // 필수
     text="자세히"           // 필수
     page="/test"            // 필수
-    data="1"                // 필수
+    data="1"                // 생략 가능
     width={123}             // 생략 가능
     height={45}             // 생략 가능
+    alertMessage="경고"     // 생략 가능
     onClick={testOnClick}   // 페이지 이동만 할 때는 생략 가능
 />
 # 주의사항
@@ -47,6 +48,9 @@ import { useNavigate } from 'react-router-dom';
 - 단위 : px
 - 생략 가능 (생략시 : 20px;)
 
+# alertMessage
+- alert 로 띄울 메시지가 있을 경우에 사용
+
 # onClick
 - 클릭이벤트는 버튼을 사용하는 컴포넌트에서 생성 후 prop으로 넘겨주기
 - 페이지 이동만 할 때는 생략 가능
@@ -63,13 +67,17 @@ interface BasicButtonProps {
     width?: number;
     height?: number;
     radius?: number;
+    alertMessage?: string;
     onClick?: () => void;
 }
 
 
-const BasicButton: React.FC<BasicButtonProps> = ({ color, text, page, data, width, height, radius, onClick }) => {
+const BasicButton: React.FC<BasicButtonProps> = ({ color, text, page, data, width, height, radius, alertMessage, onClick }) => {
     const navigate = useNavigate();
     const click = () => {
+        if (alertMessage !== undefined){
+            alert(alertMessage);
+        }
         if (onClick) {
             onClick();
         } else if (data !== undefined) {
