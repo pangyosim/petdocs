@@ -1,0 +1,29 @@
+.button {
+    color: white;
+    height: 80px;
+    width: 180px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 25px; // 기본 글씨 크기
+    // @media (max-width: 768px) {
+    //     font-size: 12px; // 화면이 작을 때 글씨 크기 줄임
+    // }
+    // @media (min-width: 1200px) {
+    //     font-size: 16px; // 화면이 클 때 글씨 크기 키움
+    // }
+
+}
+.c1 {
+    background-color: #A79277;
+}
+.c2 {
+    background-color: #D1BB9E;
+}
+.c3 {
+    background-color: #EAD8C0;
+}
+.c4 {
+    background-color: #FFF2E1;
+}
