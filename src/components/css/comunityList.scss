@@ -1,0 +1,32 @@
+.comunityList-container {
+    width: 90%; /* 화면 너비의 70% */
+    margin: 0 auto; /* 가운데 정렬을 위해 좌우 마진을 auto로 설정 */
+    display: flex;
+    background-color: #FFF2E1; /* 갈색 배경색 */
+}
+
+.comuList,
+.naverList {
+    background-color: #FFF2E1; /* 갈색 배경색 */
+    flex: 1;
+}
+
+.comuList-content,
+.naverList-content {
+    display: flex;
+    align-items: center; /* 테이블과 이미지를 세로 중앙 정렬 */
+}
+
+.comuList-table,
+.naverList-table {
+    flex: 1; /* 테이블이 남은 공간을 차지하도록 설정 */
+}
+
+.comuList-table {
+    margin-right: 10px; /* 테이블과 이미지 사이의 간격 조절 */
+}
+
+.comuList-image,
+.naverList-image {
+    max-width: 500px; /* 이미지 최대 너비 지정 */
+}
